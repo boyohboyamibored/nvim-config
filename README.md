@@ -20,8 +20,7 @@ rm -rf ~/.config/nvim/.git
 nvim
 ```
 > [!NOTE]
-> Change this line in ~/.config/nvim/lua/config/options.lua
-
-`lua
+> Change this line in ~/.config/nvim/lua/config/options.lua  
+> `lua
 opt.undodir = "/home/hermit/.local/state/nvim/undo" -- change to your own
 `
