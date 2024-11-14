@@ -16,6 +16,10 @@ git clone https://github.com/boyohboyamibored/nvim-config ~/.config/nvim
 # remove the old .git folder so you can add this config to your own repo
 rm -rf ~/.config/nvim/.git
 
-# start neovim
+# start neovim wait for install then restart neovim
 nvim
 ```
+Change this line in ~/.config/nvim/lua/config/options.lua
+`lua
+opt.undodir = "/home/hermit/.local/state/nvim/undo" -- change to your own
+`
