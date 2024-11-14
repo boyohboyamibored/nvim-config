@@ -19,7 +19,9 @@ rm -rf ~/.config/nvim/.git
 # start neovim wait for install then restart neovim
 nvim
 ```
-Change this line in ~/.config/nvim/lua/config/options.lua
+> [!NOTE]
+> Change this line in ~/.config/nvim/lua/config/options.lua
+
 `lua
 opt.undodir = "/home/hermit/.local/state/nvim/undo" -- change to your own
 `
