@@ -15,7 +15,7 @@ map("n", "k", "gk")
 map("n", "j", "gj")
 
 -- Making splits
-map("n", "<leader>h", "<C-w>v", { desc = "Make vertical split" })   -- vertical
+map("n", "<leader>h", "<C-w>v", { desc = "Make vertical split" }) -- vertical
 map("n", "<leader>v", "<C-w>s", { desc = "Make horizontal split" }) -- horizontal
 
 -- Quick jumping between splits
@@ -34,7 +34,16 @@ map("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase Window W
 map("v", ">", ">gv", { desc = "Indent right" })
 map("v", "<", "<gv", { desc = "Indent left" })
 
+-- tabs
+map("n", "<leader><tab>l", "<cmd>tablast<cr>", { desc = "Last Tab" })
+map("n", "<leader><tab>k", "<cmd>tabonly<cr>", { desc = "Close Other Tabs" })
+map("n", "<leader><tab>f", "<cmd>tabfirst<cr>", { desc = "First Tab" })
+map("n", "<leader><tab>o", "<cmd>tabnew<cr>", { desc = "Open New Tab" })
+map("n", "<leader><tab>]", "<cmd>tabnext<cr>", { desc = "Next Tab" })
+map("n", "<leader><tab>d", "<cmd>tabclose<cr>", { desc = "Close Tab" })
+map("n", "<leader><tab>[", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
+
 -- Plugins
 map("n", "<leader>l", ":Lazy<Return>", { desc = "Launch Lazy" })
 map("n", "<leader>m", ":Mason<Return>", { desc = "Launch Mason" })
-map("n", "<leader>n", ":Neotree toggle<Return>", { desc = "Toggle neo-tree" })
+map("n", "<leader>e", ":Neotree toggle<Return>", { desc = "Toggle neo-tree" })
