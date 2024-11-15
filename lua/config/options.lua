@@ -24,7 +24,6 @@ opt.writebackup = false
 
 -- remember undos
 opt.undofile = true
-opt.undodir = "/home/hermit/.local/state/nvim/undo" -- change to your own
 
 -- UI config
 opt.number = true
@@ -40,3 +39,4 @@ opt.incsearch = true -- search as characters are entered
 -- vim.opt.hlsearch = false            -- do not highlight matches
 opt.ignorecase = true -- ignore case in searches by default
 opt.smartcase = true  -- but make it case sensitive if an uppercase is entered
+opt.inccommand = "nosplit" -- preview incremental substitute
