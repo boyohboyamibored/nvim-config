@@ -5,7 +5,7 @@ vim.g.maplocalleader = " "
 
 -- Quickies
 
-map("n", "Q", ":q!<Return>")
+map("n", "qq", ":q!<Return>", { desc = "Quit vim without saving changes" })
 
 -- save file
 map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
@@ -28,7 +28,7 @@ map("v", "<A-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc 
 map("v", "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
 
 -- Making splits
-map("n", "<leader>h", "<C-w>v", { desc = "Make vertical split" }) -- vertical
+map("n", "<leader>h", "<C-w>v", { desc = "Make vertical split" })   -- vertical
 map("n", "<leader>v", "<C-w>s", { desc = "Make horizontal split" }) -- horizontal
 
 -- Quick jumping between splits
