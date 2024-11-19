@@ -6,6 +6,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	callback = function()
 		vim.opt_local.wrap = true
 		vim.opt_local.spell = true
+		vim.opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
 	end,
 })
 
