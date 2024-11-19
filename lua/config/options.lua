@@ -41,7 +41,6 @@ opt.splitbelow = true -- split horizontal windows bottom
 opt.splitright = true -- split vertical windows right
 opt.showmode = false
 opt.wrap = true -- enable line wrap
-opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
 opt.cursorline = true -- Enable highlighting of the current line
 opt.spelllang = { "en" }
 opt.virtualedit = "block"
