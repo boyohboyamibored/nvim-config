@@ -4,7 +4,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Quickies
-
 map("n", "qq", ":q!<Return>", { desc = "Quit vim without saving changes" })
 
 -- save file
@@ -18,6 +17,12 @@ map({ "n", "v" }, "L", "$", { silent = true, remap = true, desc = "Go to end of 
 map({ "n", "v" }, "H", "^", { silent = true, remap = true, desc = "Go to first charcter in current line" })
 map("n", "k", "gk", { silent = true, desc = "Up" })
 map("n", "j", "gj", { silent = true, desc = "Down" })
+
+-- searching
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+map("n", "n", "nzz")
+map("n", "N", "Nzz")
 
 -- Move Lines
 map("n", "<A-j>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
