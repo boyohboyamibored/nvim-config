@@ -17,7 +17,7 @@ map({ "n", "v", "x" }, "L", "g$", { silent = true, remap = true, desc = "Go to e
 map({ "n", "v", "x" }, "H", "g^", { silent = true, remap = true, desc = "Go to first charcter in current line" })
 map("n", "k", "gk", { silent = true, desc = "Up" })
 map("n", "j", "gj", { silent = true, desc = "Down" })
-map("i", "<C-BS>", "<C-w>", { desc = "Delete one word backowrds" })
+map("i", "<C-BS>", "<C-w>", { silent = true, remap = true, desc = "Delete one word backowrds" })
 
 -- searching
 map("n", "<C-d>", "<C-d>zz")
