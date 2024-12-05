@@ -13,8 +13,8 @@ map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear hlsearch" })
 
 -- Make things easy
-map({ "n", "v", "x" }, "L", "g$", { silent = true, remap = true, desc = "Go to end of line" })
-map({ "n", "v", "x" }, "H", "g^", { silent = true, remap = true, desc = "Go to first charcter in current line" })
+map({ "n", "v", "x" }, "L", "$", { silent = true, remap = true, desc = "Go to end of line" })
+map({ "n", "v", "x" }, "H", "^", { silent = true, remap = true, desc = "Go to first charcter in current line" })
 map("n", "k", "gk", { silent = true, desc = "Up" })
 map("n", "j", "gj", { silent = true, desc = "Down" })
 map("i", "<C-BS>", "<C-w>", { silent = true, remap = true, desc = "Delete one word backowrds" })
@@ -34,7 +34,7 @@ map("v", "<A-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc 
 map("v", "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
 
 -- Making splits
-map("n", "<leader>v", "<C-w>v", { desc = "Make vertical split" })   -- vertical
+map("n", "<leader>v", "<C-w>v", { desc = "Make vertical split" }) -- vertical
 map("n", "<leader>h", "<C-w>s", { desc = "Make horizontal split" }) -- horizontal
 
 -- Quick jumping between splits

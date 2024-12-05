@@ -27,6 +27,7 @@ return {
 
 			lspconfig.lua_ls.setup({ capabilities = capabilities }) -- the lsps must be installed
 			lspconfig.pylsp.setup({ capabilities = capabilities }) -- python
+			lspconfig.ruff.setup({ capabilities = capabilities }) -- python
 			lspconfig.rust_analyzer.setup({
 				settings = {
 					["rust-analyzer"] = {
@@ -39,20 +40,6 @@ return {
 					},
 				},
 				capabilities = capabilities,
-			})
-
-			require("cmp").setup({
-				snippet = {
-					expand = function(args)
-						vim.fn["vsnip#anonymous"](args.body)
-					end,
-				},
-				sources = {
-					{ name = "nvim_lsp" },
-					{ name = "vsnip" },
-					{ name = "path" },
-					{ name = "buffer" },
-				},
 			})
 			lspconfig.ast_grep.setup({ capabilities = capabilities })
 			lspconfig.html.setup({ capabilities = capabilities })
@@ -67,10 +54,4 @@ return {
 			keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "View code actions" })
 		end,
 	},
-
-	-- {
-	--     "mrcjkb/rustaceanvim",
-	--     version = "^5", -- Recommended
-	--     lazy = false, -- This plugin is already lazy
-	-- },
 }

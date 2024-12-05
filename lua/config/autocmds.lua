@@ -6,6 +6,13 @@ vim.api.nvim_create_autocmd("FileType", {
     callback = function()
         vim.opt_local.wrap = true
         vim.opt_local.spell = true
+        vim.keymap.set({ "n", "v", "x" }, "L", "g$", { silent = true, remap = true, desc = "Go to end of line" })
+        vim.keymap.set(
+            { "n", "v", "x" },
+            "H",
+            "g^",
+            { silent = true, remap = true, desc = "Go to first charcter in current line" }
+        )
     end,
 })
 
@@ -50,6 +57,7 @@ vim.api.nvim_create_autocmd("FileType", {
         "neotest-summary",
         "notify",
         "qf",
+        "fugitive",
         "snacks_win",
         "spectre_panel",
         "startuptime",
