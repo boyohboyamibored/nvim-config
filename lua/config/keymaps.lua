@@ -34,7 +34,7 @@ map("v", "<A-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc 
 map("v", "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
 
 -- Making splits
-map("n", "<leader>sv", "<C-w>v", { desc = "Make vertical split" }) -- vertical
+map("n", "<leader>sv", "<C-w>v", { desc = "Make vertical split" })   -- vertical
 map("n", "<leader>sh", "<C-w>s", { desc = "Make horizontal split" }) -- horizontal
 
 -- Quick jumping between splits
@@ -83,3 +83,4 @@ map("n", "<leader>ft", "<cmd>Telescope colorscheme<CR>", { desc = "Colorscheme p
 map("n", "<leader>ga", "<cmd>Gitsigns stage_buffer<CR>", { desc = "Git add current file" })
 map("n", "<leader>gc", "<cmd>Neogit commit<CR>", { desc = "Git commit staged" })
 map("n", "<leader>gP", "<cmd>Neogit push<CR>", { desc = "Git push staged" })
+map("n", "<leader>gp", "<cmd>Neogit pull<CR>", { desc = "Git pull from origin" })

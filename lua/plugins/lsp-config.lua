@@ -50,7 +50,6 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.ast_grep.setup({ capabilities = capabilities })
-            lspconfig.html.setup({ capabilities = capabilities })
             lspconfig.markdown_oxide.setup({
                 capabilities = vim.tbl_deep_extend(
                     "force",
