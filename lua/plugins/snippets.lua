@@ -11,7 +11,7 @@ return {
 
 		config = function()
 			local cmp = require("cmp")
-			-- require("luasnip.loaders.from_vscode").lazy_load() -- For `luasnip` users.
+			require("luasnip.loaders.from_vscode").lazy_load() -- For `luasnip` users.
 			cmp.setup({
 				snippet = {
 					-- REQUIRED - you must specify a snippet engine
@@ -33,8 +33,8 @@ return {
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" }, -- For luasnip users.
-				}, {
 					{ name = "buffer" },
+					{ name = "path" },
 				}),
 			})
 		end,

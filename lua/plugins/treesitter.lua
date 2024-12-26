@@ -16,6 +16,7 @@ return {
 				"markdown",
 				"markdown_inline",
 				"bash",
+				"rust",
 			},
 			auto_install = true,
 		})
