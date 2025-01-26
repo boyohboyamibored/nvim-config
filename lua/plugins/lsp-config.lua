@@ -21,7 +21,7 @@ return {
 
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "pylsp", "markdown_oxide", "rust_analyzer" },
+                ensure_installed = { "lua_ls", "pylsp", "markdown_oxide" },
             })
         end,
     },
@@ -34,8 +34,8 @@ return {
             local keymap = vim.keymap
 
             lspconfig.lua_ls.setup({ capabilities = capabilities }) -- the lsps must be installed
-            lspconfig.pylsp.setup({ capabilities = capabilities }) -- python
-            lspconfig.ruff.setup({ capabilities = capabilities }) -- python
+            lspconfig.pylsp.setup({ capabilities = capabilities })  -- python
+            lspconfig.ruff.setup({ capabilities = capabilities })   -- python
             lspconfig.rust_analyzer.setup({
                 settings = {
                     ["rust-analyzer"] = {
@@ -49,7 +49,6 @@ return {
                 },
                 capabilities = capabilities,
             })
-            lspconfig.ast_grep.setup({ capabilities = capabilities })
             lspconfig.markdown_oxide.setup({
                 capabilities = vim.tbl_deep_extend(
                     "force",

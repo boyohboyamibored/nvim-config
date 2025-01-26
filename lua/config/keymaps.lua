@@ -6,10 +6,11 @@ vim.g.maplocalleader = " "
 
 -- Quickies
 map("n", "<leader>q", ":q!<CR>", { desc = "Quit vim without saving changes" })
+map("n", "<leader>x", ":w!<CR>:!chmod +x %<CR>", { desc = "Make file executable" })
 
 -- save file
 map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", opts, { desc = "Save File" })
-map("n", "<leader>w", ":w<CR>", opts)
+map("n", "<leader>w", ":w<CR>", { desc = "Save file" })
 
 -- Clear search with <esc>
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear hlsearch" })
@@ -17,9 +18,9 @@ map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear hlsea
 -- Make things easy
 map({ "n", "v", "x" }, "L", "$", opts, { desc = "Go to end of line" })
 map({ "n", "v", "x" }, "H", "^", opts, { desc = "Go to first charcter in current line" })
-map("n", "k", "gk", { silent = true, desc = "Up" })
-map("n", "j", "gj", { silent = true, desc = "Down" })
-map("n", "<C-c>", "<cmd>%y+<CR>", opts, { desc = "general copy whole file" })
+map("n", "k", "gk", opts, { desc = "Up" })
+map("n", "j", "gj", opts, { desc = "Down" })
+map("n", "<leader>y", ":%y+<CR>", { desc = "Yank whole file" })
 
 -- paste over currently selected text without yanking it
 vim.keymap.set("v", "p", '"_dp')
@@ -41,7 +42,7 @@ map("v", "<A-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc 
 map("v", "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
 
 -- Making splits
-map("n", "<leader>sv", "<C-w>v", { desc = "Make vertical split" }) -- vertical
+map("n", "<leader>sv", "<C-w>v", { desc = "Make vertical split" })   -- vertical
 map("n", "<leader>sh", "<C-w>s", { desc = "Make horizontal split" }) -- horizontal
 
 -- Quick jumping between splits
@@ -70,8 +71,8 @@ map("n", "<leader>td", "<cmd>tabclose<cr>", { desc = "Close Tab" })
 map("n", "<leader>tp", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
 
 -- comments
-map("n", "<leader>/", "gcc", opts, { desc = "Comment line" })
-map("v", "<leader>/", "gc", opts, { desc = "Comment range" })
+map("n", "<leader>/", "gcc", opts, { desc = "Comment out line" })
+map("v", "<leader>/", "gc", opts, { desc = "Comment out range" })
 
 -- Plugins
 map("n", "<leader>l", "<cmd>Lazy<CR>", { desc = "Launch Lazy" })
